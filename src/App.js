@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 import { auth } from './firebase/firebase.utils';
+import { createUserProfileDocument } from './firebase/firebase.utils';
 
 import './App.css';
 
@@ -48,8 +49,7 @@ class App extends Component {
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({ currentUser: user });
-      console.log(user);
+      createUserProfileDocument(user);
     });
   }
 
