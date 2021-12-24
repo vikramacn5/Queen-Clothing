@@ -10,6 +10,7 @@ import Header from './components/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+// import TestComponent from './components/test-component/test-component';
 
 // const TestPage = () => {
 //   const location = useLocation();
@@ -67,6 +68,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        {/* <TestComponent /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
