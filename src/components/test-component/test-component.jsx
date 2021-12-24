@@ -1,27 +1,19 @@
-import { Component } from 'react';
+import { connect } from 'react-redux';
 
-class TestComponent extends Component {
-  constructor() {
-    super();
+const TestComponent = ({ test }) => {
+  console.log('testing', test);
+  return (
+    <div>
+      <h1>Test Component</h1>
+    </div>
+  );
+};
 
-    this.state = {
-      counter: 0,
-    };
-  }
+const mapStateToProps = (state) => {
+  console.log('test component rerendering');
+  return {
+    test: state.test,
+  };
+};
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ counter: this.state.counter + 1 });
-    }, 5000);
-  }
-
-  render() {
-    return (
-      <div onClick={() => this.setState({ counter: 5 })}>
-        <h1>{this.state.counter}</h1>
-      </div>
-    );
-  }
-}
-
-export default TestComponent;
+export default connect(mapStateToProps)(TestComponent);
