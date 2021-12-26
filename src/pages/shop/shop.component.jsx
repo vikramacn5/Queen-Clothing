@@ -2,7 +2,7 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
 
-import CategoryPage from '../../pages/category/category.component';
+import CollectionPage from '../../pages/collection/collection.component';
 
 const ShopPage = () => (
   <div>

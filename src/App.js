@@ -15,7 +15,7 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-import CategoryPage from './pages/category/category.component';
+import CollectionPage from './pages/collection/collection.component';
 // import TestComponent from './components/test-component/test-component';
 
 // const TestPage = () => {
@@ -79,7 +79,7 @@ class App extends Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop/*" element={<ShopPage />}>
             <Route path="" element={<CollectionsOverview />} />
-            <Route path=":categoryId" element={<CategoryPage />} />
+            <Route path=":collectionId" element={<CollectionPage />} />
           </Route>
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route
