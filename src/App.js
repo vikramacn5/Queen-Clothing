@@ -9,10 +9,13 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header.component';
+import CollectionsOverview from './components/collections-overview/collections-overview.component';
+
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
+import CategoryPage from './pages/category/category.component';
 // import TestComponent from './components/test-component/test-component';
 
 // const TestPage = () => {
@@ -74,7 +77,10 @@ class App extends Component {
         {/* <TestComponent /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop/*" element={<ShopPage />} />
+          <Route path="/shop/*" element={<ShopPage />}>
+            <Route path="" element={<CollectionsOverview />} />
+            <Route path=":categoryId" element={<CategoryPage />} />
+          </Route>
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route
             path="/signin"
