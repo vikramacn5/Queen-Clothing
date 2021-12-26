@@ -1,8 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
+
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
 
-const ShopPage = ({ collections }) => (
+import CategoryPage from '../../pages/category/category.component';
+
+const ShopPage = () => (
   <div>
-    <CollectionsOverview />
+    <Routes>
+      <Route path="/" element={<CollectionsOverview />} />
+      <Route path="/:categoryId" element={<CategoryPage />} />
+    </Routes>
   </div>
 );
 
