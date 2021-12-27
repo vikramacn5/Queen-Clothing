@@ -1,8 +1,10 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
+// import { Routes, Route, Outlet } from 'react-router-dom';
 
-import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
+// import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
 
-import CollectionPage from '../../pages/collection/collection.component';
+// import CollectionPage from '../../pages/collection/collection.component';
+
+import { Outlet } from 'react-router-dom';
 
 const ShopPage = () => (
   <div>
