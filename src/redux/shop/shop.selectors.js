@@ -9,6 +9,11 @@ export const selectShopCollections = createSelector(
   (shop) => shop.collections
 );
 
+export const selectCollectionsForPreview = createSelector(
+  [selectShopCollections],
+  (collections) => Object.values(collections)
+);
+
 /*
 const collectionUrlParamFind = (state, collectionUrlParam) =>
   collectionUrlParam;
