@@ -2,8 +2,8 @@
 
 ### [Live site](https://queens-clothing.herokuapp.com/)
 
-![Queens-clothing1](https://ibb.co/27PSPWM)
-![Queens-clothing2](https://ibb.co/JkMjLpK)
+![Queens-clothing1](https://i.ibb.co/hRHcHLd/project-Crown-Clothing1.png)
+![Queens-clothing2](https://i.ibb.co/kcW2nDx/project-Crown-Clothing2.png)
 
 Build using modern technologies: React.js, Hooks, React-router, Redux, Context API, Firebase, Stripe and my teacher😀
 
